@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>Heatmap Visualization</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.12/leaflet.draw.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.12/leaflet.draw.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="lib/d3.tip.js"></script>
+    <script src="lib/colorbrewer.js"></script>
+    <script src="lib/moment.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="time_overlay">
+        <div class="tab">
+            <button class="tablinksTime active">TimeSeries</button>
+        </div>
+        <div class="tabContent" id="Time">
+            <div id="timeInfo"></div>
+            <div class="btn_group">
+                <input type="radio" name = "color" value = 1 >red
+                <input type="radio" name = "color" value = 2 checked = "checked">blue
+                <input type="radio" name = "color" value = 3>purple
+                <button id="sBtn"><i class="fas fa-play"></i></button>
+                <select id="dataset">
+                <option value="Crimes">Crimes</option>
+                <option value="Gowalla">Gowalla</option>
+                <option value="Brightkite">Brightkite</option>
+                <option value="HeatMap_TS">NewYork</option>
+                <option value="enterprise">enterprise</option>
+                </select>
+            </div>
+            <div id="timeSeries"></div>
+        </div>
+        
+    </div>
+    <!-- <div class="bar_overlay">
+        <div class="tab">
+            <button class="tablinksBar active">barChart</button>
+        </div>
+        <div class="tabContent" id="Bar">
+            <div id="barChart"></div>
+        </div>
+        
+    </div> -->
+
+    <script src="lib/init.js"></script>
+    <script src="lib/spatialQuery.js"></script>
+    <script src="lib/loadLineChart.js"></script>
+    <!-- <script src="lib/setBarChart.js"></script> -->
+    <script src="lib/cache.js"></script>
+    <script src="lib/stHeatmap.js"></script>
+    <script>
+        var heat = new L.stHeatmap().addTo(map);
+        heat.setZIndex(2);
+    </script>
+    
+</body>
+</html>
