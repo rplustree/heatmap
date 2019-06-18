@@ -28,16 +28,16 @@
         <div class="tabContent" id="Time">
             <div id="timeInfo"></div>
             <div class="btn_group">
-                <input type="radio" name = "color" value = 1 >
-                <input type="radio" name = "color" value = 2 checked = "checked">
-                <input type="radio" name = "color" value = 3>
+                <input type="radio" name = "color" id = "red" value = 1 checked = "checked"><label for="red">red</label>
+                <input type="radio" name = "color" id = "blue" value = 2><label for="blue">blue</label>
+                <input type="radio" name = "color" id = "purple" value = 3><label for="purple">purple</label>
                 <button id="sBtn"><i class="fas fa-play"></i></button>
                 <select id="dataset">
+                <option value="enterprise">enterprise</option>
                 <option value="Crimes">Crimes</option>
                 <option value="Gowalla">Gowalla</option>
                 <option value="Brightkite">Brightkite</option>
                 <option value="HeatMap_TS">NewYork</option>
-                <option value="enterprise">enterprise</option>
                 </select>
             </div>
             <div id="timeSeries"></div>
@@ -64,6 +64,5 @@
         var heat = new L.stHeatmap().addTo(map);
         heat.setZIndex(2);
     </script>
-    
-</body>
+    </body>
 </html>
