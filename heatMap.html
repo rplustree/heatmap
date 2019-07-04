@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/iconfont.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.12/leaflet.draw.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
@@ -21,6 +22,7 @@
 <body>
     <div id="map"></div>
     <div id="timespend">thisshowtime</div>>
+    
     <div class="time_overlay">
         <div class="tab">
             <button class="tablinksTime active">TimeSeries</button>
@@ -42,18 +44,9 @@
             </div>
             <div id="timeSeries"></div>
         </div>
-        
     </div>
-    <!-- <div class="bar_overlay">
-        <div class="tab">
-            <button class="tablinksBar active">barChart</button>
-        </div>
-        <div class="tabContent" id="Bar">
-            <div id="barChart"></div>
-        </div>
-        
-    </div> -->
-
+    <div id="attri_chart"></div>
+    <script src="lib/drawBarchart.js"></script>
     <script src="lib/init.js"></script>
     <script src="lib/spatialQuery.js"></script>
     <script src="lib/loadLineChart.js"></script>
