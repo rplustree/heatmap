@@ -33,11 +33,16 @@ label{
     font-size: 15px;
     color: #fff;
 }
+.radio_type{
+    vertical-align:middle; 
+    margin-top:-2px;
+    margin-bottom:1px;
+}
 span{
     font-weight: normal;
 }
 .time_overlay{
-    position: absolute; 
+    position: absolute;
     bottom: 0px;
     left:0;
     z-index: 3;
@@ -59,15 +64,10 @@ span{
     color: #fff;
 }
 .btn_group{
-    margin-left: 50vw;
-    display: inline-block;
-    
+    float: right;
+    margin-right: 40px;
 }
 .time_overlay #sBtn{
-    width: 50px;
-    cursor: pointer;
-}
-.time_overlay #qBtn{
     width: 50px;
     cursor: pointer;
 }
@@ -111,10 +111,27 @@ li{
 }
 #attri_chart{
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 26%;
+    height: 40%;
     bottom: 0;
     right: 0;
     z-index: 3;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) 
+}
+.attri{
+    position: absolute;
+    bottom: 0px;
+    right:0;
+    width: 25%;
+    height: 45%;
+    z-index: 3;
+}
+.attri_tab button{
+    width: 10vw;
+    background-color:  rgba(50, 50, 50, 1);
+    border: 1px solid #fff;
+    outline: none;
+    cursor: pointer;
+    z-index: 3;
+    float: right;
 }

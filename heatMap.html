@@ -13,7 +13,6 @@
     <script src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.12/leaflet.draw.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="lib/d3.tip.js"></script>
     <script src="lib/colorbrewer.js"></script>
@@ -30,9 +29,9 @@
         <div class="tabContent" id="Time">
             <div id="timeInfo"></div>
             <div class="btn_group">
-                <input type="radio" name = "color" id = "red" value = 1 checked = "checked"><label for="red">red</label>
-                <input type="radio" name = "color" id = "blue" value = 2><label for="blue">blue</label>
-                <input type="radio" name = "color" id = "purple" value = 3><label for="purple">purple</label>
+                <input class = "radio_type" type="radio" name = "color" id = "red" value = 1 checked = "checked"><label for="red">red</label>
+                <input class = "radio_type" type="radio" name = "color" id = "blue" value = 2><label for="blue">blue</label>
+                <input class = "radio_type" type="radio" name = "color" id = "purple" value = 3><label for="purple">purple</label>
                 <button id="sBtn"><i class="fas fa-play"></i></button>
                 <select id="dataset">
                 <option value="NewYork_TS">NewYork</option>
@@ -45,15 +44,18 @@
             <div id="timeSeries"></div>
         </div>
     </div>
+    <!-- <div class="attri">
+        <div class= "attri_tab">
+            <button class="tablinksattri_chart">Attribute chart</button>
+        </div> -->
     <div id="attri_chart"></div>
+    <!-- </div>> -->
     <script src="lib/init.js"></script>
-    <!-- <script src="lib/spatialQuery.js"></script> -->
     <script src="lib/loadLineChart.js"></script>
-    <!-- <script src="lib/setBarChart.js"></script> -->
     <script src="lib/drawBarchart.js"></script>
     <script src="lib/cache.js"></script>
     <script src="lib/stHeatmap.js"></script>
-    <script>
+    <script> 
         var heat = new L.stHeatmap().addTo(map);
         heat.setZIndex(2);
     </script>
